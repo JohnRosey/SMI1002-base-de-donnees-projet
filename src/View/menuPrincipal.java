@@ -19,7 +19,15 @@ public class menuPrincipal extends JFrame {
     }
 
     private void button1(ActionEvent e) {
-        // TODO add your code here
+        film film  =new film();
+        film.show();
+        dispose();
+    }
+
+    private void button2(ActionEvent e) {
+        billet billet  =new billet();
+        billet.show();
+        dispose();
     }
 
     private void initComponents() {
@@ -79,11 +87,12 @@ public class menuPrincipal extends JFrame {
                     panel2.setBorder(new BevelBorder(BevelBorder.RAISED));
 
                     //---- button1 ----
-                    button1.setText("text");
+                    button1.setText("FILM");
                     button1.addActionListener(e -> button1(e));
 
                     //---- button2 ----
-                    button2.setText("text");
+                    button2.setText("BILLET");
+                    button2.addActionListener(e -> button2(e));
 
                     GroupLayout panel2Layout = new GroupLayout(panel2);
                     panel2.setLayout(panel2Layout);
@@ -91,9 +100,9 @@ public class menuPrincipal extends JFrame {
                         panel2Layout.createParallelGroup()
                             .addGroup(panel2Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addGroup(panel2Layout.createParallelGroup()
-                                    .addComponent(button1)
-                                    .addComponent(button2))
+                                .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(button2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(button1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap(60, Short.MAX_VALUE))
                     );
                     panel2Layout.setVerticalGroup(
@@ -151,7 +160,7 @@ public class menuPrincipal extends JFrame {
                                     .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addGap(60, 60, 60)
                                     .addComponent(button4)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                                     .addComponent(panel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addContainerGap())

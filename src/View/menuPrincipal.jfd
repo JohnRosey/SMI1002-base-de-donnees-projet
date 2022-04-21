@@ -9,7 +9,7 @@ new FormModel {
 				name: "dialogPane"
 				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp panel2:::p::p, space :p:60:p, comp button4:::p::p, space ::64:x, comp panel3:::p::p}, comp panel1:::::x}, space :::p}}"
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp panel2:::p::p, space :p:60:p, comp button4:::p::p, space ::47:x, comp panel3:::p::p}, comp panel1:::::x}, space :::p}}"
 					"$verticalGroup": "par l {seq l {comp panel1:::p::p, space u:::p, par l {seq {comp panel2:::p::p, space ::17:x}, comp panel3:::::x, seq t {space :0:155:x, comp button4:::p::p}}, space :p:70:p}}"
 				} ) {
 					name: "contentPanel"
@@ -25,19 +25,20 @@ new FormModel {
 						} )
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :p:30:p, par l {comp button1:::p::p, comp button2:::p::p}, space ::60:x}}"
+						"$horizontalGroup": "par l {seq l {space :p:30:p, par l:::p {comp button2:::::x, comp button1:::::x}, space ::60:x}}"
 						"$verticalGroup": "par l {seq l {comp button1:::p::p, space s:::p, comp button2:::p::p, space :0:90:x}}"
 					} ) {
 						name: "panel2"
 						"border": #BevelBorder0
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "button1"
-							"text": "text"
+							"text": "FILM"
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "button2"
-							"text": "text"
+							"text": "BILLET"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
 						} )
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
