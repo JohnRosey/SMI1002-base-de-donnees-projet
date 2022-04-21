@@ -5,7 +5,7 @@ import View.menuPrincipal;
 public class Main {
 
     public static void main(String[] args) {
-	connectionBD.connect();
+	connectionBD.getConnection();
         menuPrincipal menuPrincipal  =new menuPrincipal();
         menuPrincipal.show();;
 

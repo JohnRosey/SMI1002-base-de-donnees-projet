@@ -39,6 +39,7 @@ new FormModel {
 							name: "button2"
 							"text": "BILLET"
 							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
 						} )
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {

@@ -4,12 +4,17 @@
 
 package View;
 
+import coursbd.uqtr.ca.connectionBD;
+
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /**
  * @author unknown
@@ -26,6 +31,33 @@ public class billet extends JFrame {
 
     }
 
+    private void button5(ActionEvent e) {
+        try {
+            Connection con=  connectionBD.getConnection();
+            Statement stmt = con.createStatement();
+            stmt.executeQuery("SELECT  * FROM BILLET");
+            ResultSet rs = stmt.getResultSet();
+            while (rs.next()) {
+                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
+                /*System.out.println(rs.getString("BILLET_ID"));
+                System.out.println(rs.getString("NOMBRE_DE_BILLETS_DISPONIBLES"));
+                System.out.println(rs.getString("HEURE"));
+                System.out.println(rs.getString("Date"));
+
+                System.out.println(rs.getString("NUMERO_DU_BILLET"));
+                System.out.println(rs.getString("NOM_DU_FILM"));
+                String[] tbData = {rs.getString("BILLET_ID"),rs.getString("NOMBRE_DE_BILLETS_DISPONIBLES"),rs.getString("HEURE"),rs.getString("Date"),rs.getString("NUMERO"),rs.getString("NOM_DU_FILM")};
+                DefaultTableModel model = (DefaultTableModel) table1.getModel();
+                model.addRow(tbData);*/
+
+            }
+            //con.close();
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+    }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         dialogPane = new JPanel();
@@ -37,6 +69,7 @@ public class billet extends JFrame {
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
+        button5 = new JButton();
         panel2 = new JPanel();
         textField1 = new JTextField();
         textField5 = new JTextField();
@@ -50,6 +83,7 @@ public class billet extends JFrame {
         label4 = new JLabel();
         label5 = new JLabel();
         label6 = new JLabel();
+        separator1 = new JSeparator();
         buttonBar = new JPanel();
 
         //======== this ========
@@ -77,12 +111,9 @@ public class billet extends JFrame {
                             {null, null, null, null, null, null},
                             {null, null, null, null, null, null},
                             {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
                         },
                         new String[] {
-                            null, null, null, null, null, null
+                            "BILLET_ID", "NOMBRE_DE_BILLETS_DISPONIBLES","HEURE", "Date" , "NUMERO_DU_BILLET", "NOM_DU_FILM"
                         }
                     ));
                     scrollPane1.setViewportView(table1);
@@ -105,21 +136,26 @@ public class billet extends JFrame {
                     //---- button4 ----
                     button4.setText("Mise a jour");
 
+                    //---- button5 ----
+                    button5.setText("Afficher les donnees");
+                    button5.addActionListener(e -> button5(e));
+
                     GroupLayout panel1Layout = new GroupLayout(panel1);
                     panel1.setLayout(panel1Layout);
                     panel1Layout.setHorizontalGroup(
                         panel1Layout.createParallelGroup()
                             .addGroup(panel1Layout.createSequentialGroup()
-                                .addGroup(panel1Layout.createParallelGroup()
-                                    .addGroup(panel1Layout.createSequentialGroup()
-                                        .addGap(113, 113, 113)
-                                        .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(button4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(button2)
-                                            .addComponent(button1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGroup(panel1Layout.createSequentialGroup()
-                                        .addGap(99, 99, 99)
-                                        .addComponent(button3)))
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button4, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button2, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panel1Layout.createParallelGroup()
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addGap(99, 99, 99)
+                                            .addComponent(button3))
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addGap(113, 113, 113)
+                                            .addComponent(button5))))
                                 .addContainerGap(120, Short.MAX_VALUE))
                     );
                     panel1Layout.setVerticalGroup(
@@ -131,7 +167,9 @@ public class billet extends JFrame {
                                 .addComponent(button4)
                                 .addGap(55, 55, 55)
                                 .addComponent(button2)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
+                                .addGap(53, 53, 53)
+                                .addComponent(button5)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                                 .addComponent(button3)
                                 .addContainerGap())
                     );
@@ -142,22 +180,22 @@ public class billet extends JFrame {
                     panel2.setBorder(new BevelBorder(BevelBorder.LOWERED));
 
                     //---- label1 ----
-                    label1.setText("text");
+                    label1.setText("ID");
 
                     //---- label2 ----
-                    label2.setText("text");
+                    label2.setText("Heure");
 
                     //---- label3 ----
-                    label3.setText("text");
+                    label3.setText("Nombre");
 
                     //---- label4 ----
-                    label4.setText("text");
+                    label4.setText("Numero");
 
                     //---- label5 ----
-                    label5.setText("text");
+                    label5.setText("Date");
 
                     //---- label6 ----
-                    label6.setText("text");
+                    label6.setText("Nom du film");
 
                     GroupLayout panel2Layout = new GroupLayout(panel2);
                     panel2.setLayout(panel2Layout);
@@ -190,7 +228,7 @@ public class billet extends JFrame {
                                         .addGroup(panel2Layout.createParallelGroup()
                                             .addComponent(label6)
                                             .addComponent(textField6, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap(72, Short.MAX_VALUE))
+                                .addContainerGap(60, Short.MAX_VALUE))
                     );
                     panel2Layout.setVerticalGroup(
                         panel2Layout.createParallelGroup()
@@ -215,7 +253,7 @@ public class billet extends JFrame {
                                     .addComponent(textField5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(textField6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(43, Short.MAX_VALUE))
+                                .addContainerGap(31, Short.MAX_VALUE))
                     );
                 }
 
@@ -225,8 +263,10 @@ public class billet extends JFrame {
                     contentPanelLayout.createParallelGroup()
                         .addGroup(contentPanelLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addGap(87, 87, 87)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 512, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPanelLayout.createSequentialGroup()
                             .addGap(25, 25, 25)
@@ -235,9 +275,15 @@ public class billet extends JFrame {
                 contentPanelLayout.setVerticalGroup(
                     contentPanelLayout.createParallelGroup()
                         .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addGroup(contentPanelLayout.createParallelGroup()
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addGap(12, 12, 12)
+                                    .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addGap(195, 195, 195)
+                                    .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                             .addGap(18, 18, 18)
                             .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, Short.MAX_VALUE))
@@ -264,12 +310,13 @@ public class billet extends JFrame {
     private JPanel dialogPane;
     private JPanel contentPanel;
     private JScrollPane scrollPane1;
-    private JTable table1;
+    public JTable table1;
     private JPanel panel1;
     private JButton button1;
     private JButton button2;
     private JButton button3;
     private JButton button4;
+    private JButton button5;
     private JPanel panel2;
     private JTextField textField1;
     private JTextField textField5;
@@ -283,6 +330,7 @@ public class billet extends JFrame {
     private JLabel label4;
     private JLabel label5;
     private JLabel label6;
+    private JSeparator separator1;
     private JPanel buttonBar;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

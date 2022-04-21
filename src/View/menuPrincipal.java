@@ -9,6 +9,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * @author unknown
@@ -28,6 +30,10 @@ public class menuPrincipal extends JFrame {
         billet billet  =new billet();
         billet.show();
         dispose();
+    }
+
+    private void button2MouseClicked(MouseEvent e) {
+
     }
 
     private void initComponents() {
@@ -93,6 +99,12 @@ public class menuPrincipal extends JFrame {
                     //---- button2 ----
                     button2.setText("BILLET");
                     button2.addActionListener(e -> button2(e));
+                    button2.addMouseListener(new MouseAdapter() {
+                        @Override
+                        public void mouseClicked(MouseEvent e) {
+                            button2MouseClicked(e);
+                        }
+                    });
 
                     GroupLayout panel2Layout = new GroupLayout(panel2);
                     panel2.setLayout(panel2Layout);
