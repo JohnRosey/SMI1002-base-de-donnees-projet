@@ -9,12 +9,12 @@ new FormModel {
 				name: "dialogPane"
 				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp panel2:::p::p, space :p:60:p, comp button4:::p::p, space ::47:x, comp panel3:::p::p}, comp panel1:::::x}, space :::p}}"
-					"$verticalGroup": "par l {seq l {comp panel1:::p::p, space u:::p, par l {seq {comp panel2:::p::p, space ::17:x}, comp panel3:::::x, seq t {space :0:155:x, comp button4:::p::p}}, space :p:70:p}}"
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp panel2:::p::p, space :p:60:p, comp button4:::p::p, space ::10:x, comp panel3:::p::p}, comp panel1:::::x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {comp panel1:::p::p, space u:::p, par l {seq {comp panel2:::p::p, space ::9:x}, comp panel3:::::x, seq t {space :0:151:x, comp button4:::p::p}}, space :p:70:p}}"
 				} ) {
 					name: "contentPanel"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :p:214:p, comp label1:::p::p, space ::213:x}}"
+						"$horizontalGroup": "par l {seq l {space :p:214:p, comp label1:::p::p, space ::230:x}}"
 						"$verticalGroup": "par l {seq t {space ::44:x, comp label1:::p::p, space :p:40:p}}"
 					} ) {
 						name: "panel1"
@@ -44,13 +44,14 @@ new FormModel {
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 						"$horizontalGroup": "par l {seq t {space ::52:x, par l {comp button5:::p::p, comp button3:::p::p}, space :p:38:p}}"
-						"$verticalGroup": "par l {seq l {comp button5:::p::p, space s:::p, comp button3:::p::p, space :0:107:x}}"
+						"$verticalGroup": "par l {seq l {comp button5:::p::p, space s:::p, comp button3:::p::p, space :0:99:x}}"
 					} ) {
 						name: "panel3"
 						"border": #BevelBorder0
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "button5"
-							"text": "text"
+							"text": "CLIENT"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "button3"

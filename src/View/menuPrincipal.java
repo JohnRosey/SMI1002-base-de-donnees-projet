@@ -36,6 +36,12 @@ public class menuPrincipal extends JFrame {
 
     }
 
+    private void button5(ActionEvent e) {
+        Client client  =new Client();
+        client.show();
+        dispose();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         dialogPane = new JPanel();
@@ -77,7 +83,7 @@ public class menuPrincipal extends JFrame {
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(214, 214, 214)
                                 .addComponent(label1)
-                                .addContainerGap(213, Short.MAX_VALUE))
+                                .addContainerGap(230, Short.MAX_VALUE))
                     );
                     panel1Layout.setVerticalGroup(
                         panel1Layout.createParallelGroup()
@@ -132,7 +138,8 @@ public class menuPrincipal extends JFrame {
                     panel3.setBorder(new BevelBorder(BevelBorder.RAISED));
 
                     //---- button5 ----
-                    button5.setText("text");
+                    button5.setText("CLIENT");
+                    button5.addActionListener(e -> button5(e));
 
                     //---- button3 ----
                     button3.setText("text");
@@ -154,7 +161,7 @@ public class menuPrincipal extends JFrame {
                                 .addComponent(button5)
                                 .addGap(18, 18, 18)
                                 .addComponent(button3)
-                                .addGap(0, 107, Short.MAX_VALUE))
+                                .addGap(0, 99, Short.MAX_VALUE))
                     );
                 }
 
@@ -172,7 +179,7 @@ public class menuPrincipal extends JFrame {
                                     .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addGap(60, 60, 60)
                                     .addComponent(button4)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                                     .addComponent(panel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addContainerGap())
@@ -185,10 +192,10 @@ public class menuPrincipal extends JFrame {
                             .addGroup(contentPanelLayout.createParallelGroup()
                                 .addGroup(contentPanelLayout.createSequentialGroup()
                                     .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE))
                                 .addComponent(panel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(GroupLayout.Alignment.TRAILING, contentPanelLayout.createSequentialGroup()
-                                    .addGap(0, 155, Short.MAX_VALUE)
+                                    .addGap(0, 151, Short.MAX_VALUE)
                                     .addComponent(button4)))
                             .addGap(70, 70, 70))
                 );
