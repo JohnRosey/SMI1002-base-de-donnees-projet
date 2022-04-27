@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MODELE FESPACO" id="06360D49-E28D-9C7C-BB0D-FB77D053123C" version="3.5">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:04:32 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>06360D49-E28D-9C7C-BB0D-FB77D053123C</designId>
+</OSDM_Design>

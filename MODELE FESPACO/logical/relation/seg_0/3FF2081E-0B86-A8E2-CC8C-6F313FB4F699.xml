@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VEND" directorySegmentName="seg_0" id="3FF2081E-0B86-A8E2-CC8C-6F313FB4F699">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:48:23 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<sourcePk>81B0B923-E44B-ADC1-DBCA-DB7D6E88448F</sourcePk>
+<targetPk>6815D99B-9557-4DB6-0E2F-5770069FDFC7</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>DB233124-B173-C195-1E82-53605CFE87B7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4D75F282-70E7-A07C-5BBA-7FF2CC44577E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

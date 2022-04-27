@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="58252C29-2263-BBA4-FC6F-6826174144F4" name="CLIENT">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:15 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E2DBC23B-FA97-89E4-48F0-1543FBD2F529">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:22 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOM" id="0D1E5549-DA8A-6653-1D79-29EE9BD0720F">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:29 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRENOM" id="75D95351-CA2C-563C-FE14-772C98A03FE3">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:32 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMAIL" id="272FA6D8-9C15-CDFF-B28F-B6DE8947AC42">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:38 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ADRESSE" id="CA05D5E3-8408-F1AC-145D-C3B943E9A231">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:56 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A06AF44F-11F6-9113-DFD3-5D90E725B6F5" name="CLIENT PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:05:26 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E2DBC23B-FA97-89E4-48F0-1543FBD2F529</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
