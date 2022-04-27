@@ -1,5 +1,5 @@
 /*
- * Created by JFormDesigner on Mon Apr 25 18:19:26 EDT 2022
+ * Created by JFormDesigner on Tue Apr 26 13:22:54 EDT 2022
  */
 
 package View;
@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 /**
  * @author unknown
@@ -23,44 +23,46 @@ public class Client extends JFrame {
     }
 
     private void button1(ActionEvent e) {
-        try{
-
-            String req = "insert into CLIENT(CLIENT_ID,CLIENT_PRENOM, CLIENT_NOM ,CLIENT_TEL , CLIENT_EMAIL, CLIENT_ADRESSE) values (?,?,?,?,?,?)";
-            String id= ID.getText();
-            String prenom= Prenom.getText();
-            String nom= Nom.getText();
-            String tel= Tel.getText();
-            String Email= email.getText();
-            String adresse= Adresse.getText();
-            PreparedStatement pst = connectionBD.getConnection().prepareStatement(req);
-            pst.setString(1,id);
-            pst.setString(2,prenom);
-            pst.setString(3,nom);
-            pst.setString(4,tel);
-            pst.setString(5,Email);
-            pst.setString(6,adresse);
-
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Ajout avec succes");
-
-
-
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        // TODO add your code here
     }
 
     private void button3(ActionEvent e) {
-        // TODO add your code here
+        menuPrincipal menuPrincipal  =new menuPrincipal();
+        menuPrincipal.show();
+        dispose();
     }
 
-    private void button5(ActionEvent e) {
-        // TODO add your code here
-    }
+    private void button5(ActionEvent e) throws SQLException {
 
-    private void button2(ActionEvent e) {
+        String query= "SELECT * FROM CLIENT";
+        Connection con = connectionBD.getConnection();
+        Statement st =con.createStatement();
+        ResultSet rs = st.executeQuery(query);
+        ResultSetMetaData md= rs.getMetaData();
+        DefaultTableModel model = (DefaultTableModel) table1.getModel();
 
+        int cols = md.getColumnCount();
+        String[] colName = new String[cols];
+         for(int i =0 ; i<cols ;i++){
+             colName[i]=md.getColumnName(i+1);
+         }
+         model.setColumnIdentifiers(colName);
+
+String ID ,NOM, PRENOM , TEL, EMAIL, ADRESSE;
+
+while (rs.next()){
+    ID=rs.getString(1);
+    NOM=rs.getString(2);
+    PRENOM=rs.getString(3);
+    TEL=rs.getString(4);
+    EMAIL=rs.getString(5);
+    ADRESSE=rs.getString(6);
+String [] row ={ID,NOM,PRENOM,TEL,EMAIL,ADRESSE};
+model.addRow(row);
+
+
+
+}
     }
 
     private void initComponents() {
@@ -70,29 +72,29 @@ public class Client extends JFrame {
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
         panel1 = new JPanel();
-        Add = new JButton();
+        button1 = new JButton();
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
         button5 = new JButton();
         panel2 = new JPanel();
         ID = new JTextField();
-        email = new JTextField();
-        Nom = new JTextField();
-        Adresse = new JTextField();
-        Tel = new JTextField();
+        Heure = new JTextField();
+        Nombre = new JTextField();
+        Numero = new JTextField();
+        Date = new JTextField();
+        NomduFilm = new JTextField();
         label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
         label5 = new JLabel();
-        prenom = new JTextField();
-        Prenom = new JLabel();
+        label6 = new JLabel();
         separator1 = new JSeparator();
         buttonBar = new JPanel();
 
         //======== this ========
-        setTitle("CLIENT");
+        setTitle("BILLET");
         var contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
 
@@ -108,19 +110,7 @@ public class Client extends JFrame {
                 {
 
                     //---- table1 ----
-                    table1.setModel(new DefaultTableModel(
-                        new Object[][] {
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                            {null, null, null, null, null, null},
-                        },
-                        new String[] {
-                            "BILLET_ID", "NOMBRE_DE_BILLETS_DISPONIBLES", "Date", "HEURE", "NUMERO_DU_BILLET", "NOM_DU_FILM"
-                        }
-                    ));
+                    table1.setModel(new DefaultTableModel());
                     scrollPane1.setViewportView(table1);
                 }
 
@@ -128,28 +118,37 @@ public class Client extends JFrame {
                 {
                     panel1.setBorder(new BevelBorder(BevelBorder.RAISED));
 
-                    //---- Add ----
-                    Add.setText("Ajouter");
-                    Add.addActionListener(e -> {
-			button1(e);
-			button1(e);
-			button1(e);
-		});
+                    //---- button1 ----
+                    button1.setText("Ajouter");
+                    button1.addActionListener(e -> button1(e));
 
                     //---- button2 ----
                     button2.setText("Supprimer");
-                    button2.addActionListener(e -> button2(e));
 
                     //---- button3 ----
                     button3.setText("RETOUR AU MENU");
-                    button3.addActionListener(e -> button3(e));
+                    button3.addActionListener(e -> {
+			button3(e);
+			button3(e);
+		});
 
                     //---- button4 ----
                     button4.setText("Mise a jour");
 
                     //---- button5 ----
                     button5.setText("Afficher les donnees");
-                    button5.addActionListener(e -> button5(e));
+                    button5.addActionListener(e -> {
+                        try {
+                            button5(e);
+                        } catch (SQLException ex) {
+                            ex.printStackTrace();
+                        }
+                        try {
+                            button5(e);
+                        } catch (SQLException ex) {
+                            ex.printStackTrace();
+                        }
+                    });
 
                     GroupLayout panel1Layout = new GroupLayout(panel1);
                     panel1.setLayout(panel1Layout);
@@ -157,7 +156,7 @@ public class Client extends JFrame {
                         panel1Layout.createParallelGroup()
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Add, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button4, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button2, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
                                     .addGroup(panel1Layout.createParallelGroup()
@@ -173,7 +172,7 @@ public class Client extends JFrame {
                         panel1Layout.createParallelGroup()
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addComponent(Add)
+                                .addComponent(button1)
                                 .addGap(39, 39, 39)
                                 .addComponent(button4)
                                 .addGap(55, 55, 55)
@@ -194,19 +193,19 @@ public class Client extends JFrame {
                     label1.setText("ID");
 
                     //---- label2 ----
-                    label2.setText("email");
+                    label2.setText("Heure");
 
                     //---- label3 ----
-                    label3.setText("Nom");
+                    label3.setText("Nombre");
 
                     //---- label4 ----
-                    label4.setText("adresse");
+                    label4.setText("Numero");
 
                     //---- label5 ----
-                    label5.setText("Tel");
+                    label5.setText("Date");
 
-                    //---- Prenom ----
-                    Prenom.setText("Prenom");
+                    //---- label6 ----
+                    label6.setText("Nom du film");
 
                     GroupLayout panel2Layout = new GroupLayout(panel2);
                     panel2.setLayout(panel2Layout);
@@ -221,29 +220,25 @@ public class Client extends JFrame {
                                             .addComponent(label1))
                                         .addGap(125, 125, 125)
                                         .addGroup(panel2Layout.createParallelGroup()
-                                            .addGroup(panel2Layout.createSequentialGroup()
-                                                .addComponent(label3)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 259, Short.MAX_VALUE)
-                                                .addComponent(label5)
-                                                .addGap(150, 150, 150))
-                                            .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                                                .addGroup(panel2Layout.createParallelGroup()
-                                                    .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(prenom, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                                                        .addComponent(Nom, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
-                                                    .addComponent(Prenom))
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                                                .addGroup(panel2Layout.createParallelGroup()
-                                                    .addComponent(Tel, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createParallelGroup()
-                                                        .addComponent(label4)
-                                                        .addComponent(Adresse, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)))
-                                                .addGap(22, 22, 22))))
+                                            .addComponent(Nombre, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(label3))
+                                        .addGap(87, 87, 87)
+                                        .addGroup(panel2Layout.createParallelGroup()
+                                            .addComponent(label5)
+                                            .addComponent(Date, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(panel2Layout.createSequentialGroup()
                                         .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(email, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Heure, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
                                             .addComponent(label2))
-                                        .addGap(208, 576, Short.MAX_VALUE))))
+                                        .addGap(125, 125, 125)
+                                        .addGroup(panel2Layout.createParallelGroup()
+                                            .addComponent(Numero, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(label4))
+                                        .addGap(87, 87, 87)
+                                        .addGroup(panel2Layout.createParallelGroup()
+                                            .addComponent(label6)
+                                            .addComponent(NomduFilm, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))))
+                                .addContainerGap(60, Short.MAX_VALUE))
                     );
                     panel2Layout.setVerticalGroup(
                         panel2Layout.createParallelGroup()
@@ -256,20 +251,19 @@ public class Client extends JFrame {
                                 .addGap(1, 1, 1)
                                 .addGroup(panel2Layout.createParallelGroup()
                                     .addComponent(ID, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Nom, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Tel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(24, 24, 24)
+                                    .addComponent(Nombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Date, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
                                 .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                     .addComponent(label2)
                                     .addComponent(label4)
-                                    .addComponent(Prenom))
+                                    .addComponent(label6))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(email, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Adresse, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(prenom, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(33, Short.MAX_VALUE))
+                                .addGroup(panel2Layout.createParallelGroup()
+                                    .addComponent(Heure, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Numero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NomduFilm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(31, Short.MAX_VALUE))
                     );
                 }
 
@@ -328,24 +322,24 @@ public class Client extends JFrame {
     private JScrollPane scrollPane1;
     public JTable table1;
     private JPanel panel1;
-    private JButton Add;
+    private JButton button1;
     private JButton button2;
     private JButton button3;
     private JButton button4;
     private JButton button5;
     private JPanel panel2;
     private JTextField ID;
-    private JTextField email;
-    private JTextField Nom;
-    private JTextField Adresse;
-    private JTextField Tel;
+    private JTextField Heure;
+    private JTextField Nombre;
+    private JTextField Numero;
+    private JTextField Date;
+    private JTextField NomduFilm;
     private JLabel label1;
     private JLabel label2;
     private JLabel label3;
     private JLabel label4;
     private JLabel label5;
-    private JTextField prenom;
-    private JLabel Prenom;
+    private JLabel label6;
     private JSeparator separator1;
     private JPanel buttonBar;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
