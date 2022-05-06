@@ -116,7 +116,7 @@ public class billet extends JFrame {
 
         //======== this ========
         setTitle("BILLET");
-        var contentPane = getContentPane();
+        Container contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
 
         //======== dialogPane ========

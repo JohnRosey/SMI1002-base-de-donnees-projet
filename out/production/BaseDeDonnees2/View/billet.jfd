@@ -202,7 +202,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"size": new java.awt.Dimension( 1005, 770 )
-			"location": new java.awt.Point( 160, 0 )
+			"location": new java.awt.Point( 50, 0 )
 		} )
 	}
 }

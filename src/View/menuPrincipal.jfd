@@ -5,62 +5,39 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 			name: "this"
+			"title": "ACCUEIL"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 				name: "dialogPane"
 				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp panel2:::p::p, space :p:60:p, comp button4:::p::p, space ::10:x, comp panel3:::p::p}, comp panel1:::::x}, space :::p}}"
-					"$verticalGroup": "par l {seq l {comp panel1:::p::p, space u:::p, par l {seq {comp panel2:::p::p, space ::9:x}, comp panel3:::::x, seq t {space :0:151:x, comp button4:::p::p}}, space :p:70:p}}"
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp panel1:::::x, seq l {comp button1:::p:145:p, space :::x, par l {comp label3:::p::p, comp button5:::p:121:p}}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {par l {seq {comp panel1:::p::p, space :p:59:p, comp button1:::p::p}, seq l {space :p:142:p, comp label3:::p::p, space :::p, comp button5:::p::p}}, space ::173:x}}"
 				} ) {
 					name: "contentPanel"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :p:214:p, comp label1:::p::p, space ::230:x}}"
-						"$verticalGroup": "par l {seq t {space ::44:x, comp label1:::p::p, space :p:40:p}}"
+						"$horizontalGroup": "par l {seq l {space :p:194:p, comp label1:::p::p, space ::238:x}}"
+						"$verticalGroup": "par l {seq l {space :p:38:p, comp label1:::p::p, space ::46:x}}"
 					} ) {
 						name: "panel1"
-						"border": &BevelBorder0 new javax.swing.border.BevelBorder( 0, null, null, null, null )
+						"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
 						add( new FormComponent( "javax.swing.JLabel" ) {
 							name: "label1"
-							"text": "SMI1002"
-						} )
-					} )
-					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :p:30:p, par l:::p {comp button2:::::x, comp button1:::::x}, space ::60:x}}"
-						"$verticalGroup": "par l {seq l {comp button1:::p::p, space s:::p, comp button2:::p::p, space :0:90:x}}"
-					} ) {
-						name: "panel2"
-						"border": #BevelBorder0
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button1"
-							"text": "FILM"
-							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button2"
-							"text": "BILLET"
-							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
-							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
-						} )
-					} )
-					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq t {space ::52:x, par l {comp button5:::p::p, comp button3:::p::p}, space :p:38:p}}"
-						"$verticalGroup": "par l {seq l {comp button5:::p::p, space s:::p, comp button3:::p::p, space :0:99:x}}"
-					} ) {
-						name: "panel3"
-						"border": #BevelBorder0
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button5"
-							"text": "CLIENT"
-							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button3"
-							"text": "text"
+							"text": "INFO FILM"
 						} )
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button4"
-						"text": "text"
+						name: "button5"
+						"text": "CLIENT"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "LISTE DES FILMS"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Voir la liste des clients"
 					} )
 				}, new FormLayoutConstraints( class java.lang.String ) {
 					"value": "Center"

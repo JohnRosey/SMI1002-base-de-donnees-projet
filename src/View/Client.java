@@ -7,7 +7,6 @@ package View;
 import coursbd.uqtr.ca.connectionBD;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -71,30 +70,13 @@ model.addRow(row);
         contentPanel = new JPanel();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
-        panel1 = new JPanel();
-        button1 = new JButton();
-        button2 = new JButton();
-        button3 = new JButton();
-        button4 = new JButton();
-        button5 = new JButton();
-        panel2 = new JPanel();
-        ID = new JTextField();
-        Heure = new JTextField();
-        Nombre = new JTextField();
-        Numero = new JTextField();
-        Date = new JTextField();
-        NomduFilm = new JTextField();
-        label1 = new JLabel();
-        label2 = new JLabel();
-        label3 = new JLabel();
-        label4 = new JLabel();
-        label5 = new JLabel();
-        label6 = new JLabel();
         separator1 = new JSeparator();
+        button3 = new JButton();
+        button5 = new JButton();
         buttonBar = new JPanel();
 
         //======== this ========
-        setTitle("BILLET");
+        setTitle("CLIENT");
         var contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
 
@@ -114,189 +96,63 @@ model.addRow(row);
                     scrollPane1.setViewportView(table1);
                 }
 
-                //======== panel1 ========
-                {
-                    panel1.setBorder(new BevelBorder(BevelBorder.RAISED));
-
-                    //---- button1 ----
-                    button1.setText("Ajouter");
-                    button1.addActionListener(e -> button1(e));
-
-                    //---- button2 ----
-                    button2.setText("Supprimer");
-
-                    //---- button3 ----
-                    button3.setText("RETOUR AU MENU");
-                    button3.addActionListener(e -> {
+                //---- button3 ----
+                button3.setText("RETOUR AU MENU");
+                button3.addActionListener(e -> {
 			button3(e);
 			button3(e);
 		});
 
-                    //---- button4 ----
-                    button4.setText("Mise a jour");
-
-                    //---- button5 ----
-                    button5.setText("Afficher les donnees");
-                    button5.addActionListener(e -> {
-                        try {
-                            button5(e);
-                        } catch (SQLException ex) {
-                            ex.printStackTrace();
-                        }
-                        try {
-                            button5(e);
-                        } catch (SQLException ex) {
-                            ex.printStackTrace();
-                        }
-                    });
-
-                    GroupLayout panel1Layout = new GroupLayout(panel1);
-                    panel1.setLayout(panel1Layout);
-                    panel1Layout.setHorizontalGroup(
-                        panel1Layout.createParallelGroup()
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button4, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button2, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panel1Layout.createParallelGroup()
-                                        .addGroup(panel1Layout.createSequentialGroup()
-                                            .addGap(99, 99, 99)
-                                            .addComponent(button3))
-                                        .addGroup(panel1Layout.createSequentialGroup()
-                                            .addGap(113, 113, 113)
-                                            .addComponent(button5))))
-                                .addContainerGap(120, Short.MAX_VALUE))
-                    );
-                    panel1Layout.setVerticalGroup(
-                        panel1Layout.createParallelGroup()
-                            .addGroup(panel1Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(button1)
-                                .addGap(39, 39, 39)
-                                .addComponent(button4)
-                                .addGap(55, 55, 55)
-                                .addComponent(button2)
-                                .addGap(53, 53, 53)
-                                .addComponent(button5)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                                .addComponent(button3)
-                                .addContainerGap())
-                    );
-                }
-
-                //======== panel2 ========
-                {
-                    panel2.setBorder(new BevelBorder(BevelBorder.LOWERED));
-
-                    //---- label1 ----
-                    label1.setText("ID");
-
-                    //---- label2 ----
-                    label2.setText("Heure");
-
-                    //---- label3 ----
-                    label3.setText("Nombre");
-
-                    //---- label4 ----
-                    label4.setText("Numero");
-
-                    //---- label5 ----
-                    label5.setText("Date");
-
-                    //---- label6 ----
-                    label6.setText("Nom du film");
-
-                    GroupLayout panel2Layout = new GroupLayout(panel2);
-                    panel2.setLayout(panel2Layout);
-                    panel2Layout.setHorizontalGroup(
-                        panel2Layout.createParallelGroup()
-                            .addGroup(panel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(panel2Layout.createParallelGroup()
-                                    .addGroup(panel2Layout.createSequentialGroup()
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(ID, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label1))
-                                        .addGap(125, 125, 125)
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(Nombre, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label3))
-                                        .addGap(87, 87, 87)
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(label5)
-                                            .addComponent(Date, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(panel2Layout.createSequentialGroup()
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(Heure, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label2))
-                                        .addGap(125, 125, 125)
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(Numero, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(label4))
-                                        .addGap(87, 87, 87)
-                                        .addGroup(panel2Layout.createParallelGroup()
-                                            .addComponent(label6)
-                                            .addComponent(NomduFilm, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap(60, Short.MAX_VALUE))
-                    );
-                    panel2Layout.setVerticalGroup(
-                        panel2Layout.createParallelGroup()
-                            .addGroup(panel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label1)
-                                    .addComponent(label3)
-                                    .addComponent(label5))
-                                .addGap(1, 1, 1)
-                                .addGroup(panel2Layout.createParallelGroup()
-                                    .addComponent(ID, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Nombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Date, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addGap(26, 26, 26)
-                                .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label2)
-                                    .addComponent(label4)
-                                    .addComponent(label6))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel2Layout.createParallelGroup()
-                                    .addComponent(Heure, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Numero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NomduFilm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(31, Short.MAX_VALUE))
-                    );
-                }
+                //---- button5 ----
+                button5.setText("Afficher les donnees");
+                button5.addActionListener(e -> {
+                    try {
+                        button5(e);
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                    try {
+                        button5(e);
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                });
 
                 GroupLayout contentPanelLayout = new GroupLayout(contentPanel);
                 contentPanel.setLayout(contentPanelLayout);
                 contentPanelLayout.setHorizontalGroup(
                     contentPanelLayout.createParallelGroup()
                         .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 512, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addGap(343, 343, 343)
+                            .addComponent(button3)
+                            .addGap(280, 503, Short.MAX_VALUE))
                         .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addContainerGap()
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 653, GroupLayout.PREFERRED_SIZE)
+                            .addGroup(contentPanelLayout.createParallelGroup()
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addGap(150, 150, 150)
+                                    .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                                    .addComponent(button5)
+                                    .addGap(149, 149, 149))))
                 );
                 contentPanelLayout.setVerticalGroup(
                     contentPanelLayout.createParallelGroup()
                         .addGroup(contentPanelLayout.createSequentialGroup()
                             .addGroup(contentPanelLayout.createParallelGroup()
                                 .addGroup(contentPanelLayout.createSequentialGroup()
-                                    .addGap(12, 12, 12)
-                                    .addGroup(contentPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(contentPanelLayout.createSequentialGroup()
                                     .addGap(195, 195, 195)
-                                    .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                            .addGap(18, 18, 18)
-                            .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(button5))
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addGap(13, 13, 13)
+                                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                            .addComponent(button3)
+                            .addGap(36, 36, 36))
                 );
             }
             dialogPane.add(contentPanel, BorderLayout.CENTER);
@@ -321,26 +177,9 @@ model.addRow(row);
     private JPanel contentPanel;
     private JScrollPane scrollPane1;
     public JTable table1;
-    private JPanel panel1;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JPanel panel2;
-    private JTextField ID;
-    private JTextField Heure;
-    private JTextField Nombre;
-    private JTextField Numero;
-    private JTextField Date;
-    private JTextField NomduFilm;
-    private JLabel label1;
-    private JLabel label2;
-    private JLabel label3;
-    private JLabel label4;
-    private JLabel label5;
-    private JLabel label6;
     private JSeparator separator1;
+    private JButton button3;
+    private JButton button5;
     private JPanel buttonBar;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

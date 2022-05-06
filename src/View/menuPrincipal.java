@@ -9,15 +9,16 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
  * @author unknown
  */
 public class menuPrincipal extends JFrame {
+
     public menuPrincipal() {
         initComponents();
+
     }
 
     private void button1(ActionEvent e) {
@@ -42,22 +43,26 @@ public class menuPrincipal extends JFrame {
         dispose();
     }
 
+
+    private void button3(ActionEvent e) {
+        reservation reservation  =new reservation();
+        reservation.show();
+        dispose();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         dialogPane = new JPanel();
         contentPanel = new JPanel();
         panel1 = new JPanel();
         label1 = new JLabel();
-        panel2 = new JPanel();
-        button1 = new JButton();
-        button2 = new JButton();
-        panel3 = new JPanel();
         button5 = new JButton();
-        button3 = new JButton();
-        button4 = new JButton();
+        button1 = new JButton();
+        label3 = new JLabel();
         buttonBar = new JPanel();
 
         //======== this ========
+        setTitle("ACCUEIL");
         var contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
 
@@ -74,99 +79,36 @@ public class menuPrincipal extends JFrame {
                     panel1.setBorder(new BevelBorder(BevelBorder.RAISED));
 
                     //---- label1 ----
-                    label1.setText("SMI1002");
+                    label1.setText("INFO FILM");
 
                     GroupLayout panel1Layout = new GroupLayout(panel1);
                     panel1.setLayout(panel1Layout);
                     panel1Layout.setHorizontalGroup(
                         panel1Layout.createParallelGroup()
                             .addGroup(panel1Layout.createSequentialGroup()
-                                .addGap(214, 214, 214)
+                                .addGap(194, 194, 194)
                                 .addComponent(label1)
-                                .addContainerGap(230, Short.MAX_VALUE))
+                                .addContainerGap(238, Short.MAX_VALUE))
                     );
                     panel1Layout.setVerticalGroup(
                         panel1Layout.createParallelGroup()
-                            .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                .addContainerGap(44, Short.MAX_VALUE)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
                                 .addComponent(label1)
-                                .addGap(40, 40, 40))
+                                .addContainerGap(46, Short.MAX_VALUE))
                     );
                 }
 
-                //======== panel2 ========
-                {
-                    panel2.setBorder(new BevelBorder(BevelBorder.RAISED));
+                //---- button5 ----
+                button5.setText("CLIENT");
+                button5.addActionListener(e -> button5(e));
 
-                    //---- button1 ----
-                    button1.setText("FILM");
-                    button1.addActionListener(e -> button1(e));
+                //---- button1 ----
+                button1.setText("LISTE DES FILMS");
+                button1.addActionListener(e -> button1(e));
 
-                    //---- button2 ----
-                    button2.setText("BILLET");
-                    button2.addActionListener(e -> button2(e));
-                    button2.addMouseListener(new MouseAdapter() {
-                        @Override
-                        public void mouseClicked(MouseEvent e) {
-                            button2MouseClicked(e);
-                        }
-                    });
-
-                    GroupLayout panel2Layout = new GroupLayout(panel2);
-                    panel2.setLayout(panel2Layout);
-                    panel2Layout.setHorizontalGroup(
-                        panel2Layout.createParallelGroup()
-                            .addGroup(panel2Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(button2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(button1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap(60, Short.MAX_VALUE))
-                    );
-                    panel2Layout.setVerticalGroup(
-                        panel2Layout.createParallelGroup()
-                            .addGroup(panel2Layout.createSequentialGroup()
-                                .addComponent(button1)
-                                .addGap(18, 18, 18)
-                                .addComponent(button2)
-                                .addGap(0, 90, Short.MAX_VALUE))
-                    );
-                }
-
-                //======== panel3 ========
-                {
-                    panel3.setBorder(new BevelBorder(BevelBorder.RAISED));
-
-                    //---- button5 ----
-                    button5.setText("CLIENT");
-                    button5.addActionListener(e -> button5(e));
-
-                    //---- button3 ----
-                    button3.setText("text");
-
-                    GroupLayout panel3Layout = new GroupLayout(panel3);
-                    panel3.setLayout(panel3Layout);
-                    panel3Layout.setHorizontalGroup(
-                        panel3Layout.createParallelGroup()
-                            .addGroup(GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
-                                .addContainerGap(52, Short.MAX_VALUE)
-                                .addGroup(panel3Layout.createParallelGroup()
-                                    .addComponent(button5)
-                                    .addComponent(button3))
-                                .addGap(38, 38, 38))
-                    );
-                    panel3Layout.setVerticalGroup(
-                        panel3Layout.createParallelGroup()
-                            .addGroup(panel3Layout.createSequentialGroup()
-                                .addComponent(button5)
-                                .addGap(18, 18, 18)
-                                .addComponent(button3)
-                                .addGap(0, 99, Short.MAX_VALUE))
-                    );
-                }
-
-                //---- button4 ----
-                button4.setText("text");
+                //---- label3 ----
+                label3.setText("Voir la liste des clients");
 
                 GroupLayout contentPanelLayout = new GroupLayout(contentPanel);
                 contentPanel.setLayout(contentPanelLayout);
@@ -175,29 +117,29 @@ public class menuPrincipal extends JFrame {
                         .addGroup(contentPanelLayout.createSequentialGroup()
                             .addContainerGap()
                             .addGroup(contentPanelLayout.createParallelGroup()
+                                .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(contentPanelLayout.createSequentialGroup()
-                                    .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addGap(60, 60, 60)
-                                    .addComponent(button4)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                                    .addComponent(panel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(contentPanelLayout.createParallelGroup()
+                                        .addComponent(label3)
+                                        .addComponent(button5, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE))))
                             .addContainerGap())
                 );
                 contentPanelLayout.setVerticalGroup(
                     contentPanelLayout.createParallelGroup()
                         .addGroup(contentPanelLayout.createSequentialGroup()
-                            .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(contentPanelLayout.createParallelGroup()
                                 .addGroup(contentPanelLayout.createSequentialGroup()
-                                    .addComponent(panel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE))
-                                .addComponent(panel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(GroupLayout.Alignment.TRAILING, contentPanelLayout.createSequentialGroup()
-                                    .addGap(0, 151, Short.MAX_VALUE)
-                                    .addComponent(button4)))
-                            .addGap(70, 70, 70))
+                                    .addComponent(panel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(59, 59, 59)
+                                    .addComponent(button1))
+                                .addGroup(contentPanelLayout.createSequentialGroup()
+                                    .addGap(142, 142, 142)
+                                    .addComponent(label3)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button5)))
+                            .addContainerGap(173, Short.MAX_VALUE))
                 );
             }
             dialogPane.add(contentPanel, BorderLayout.CENTER);
@@ -222,13 +164,9 @@ public class menuPrincipal extends JFrame {
     private JPanel contentPanel;
     private JPanel panel1;
     private JLabel label1;
-    private JPanel panel2;
-    private JButton button1;
-    private JButton button2;
-    private JPanel panel3;
     private JButton button5;
-    private JButton button3;
-    private JButton button4;
+    private JButton button1;
+    private JLabel label3;
     private JPanel buttonBar;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
