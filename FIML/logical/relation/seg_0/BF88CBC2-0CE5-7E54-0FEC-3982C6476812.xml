@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VEND" directorySegmentName="seg_0" id="BF88CBC2-0CE5-7E54-0FEC-3982C6476812">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:37:37 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<sourcePk>2556BCFA-4FA1-015D-8D34-E000791E90FE</sourcePk>
+<targetPk>58180547-8059-A26E-CA89-BC923F7BAACD</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>28346EE6-D313-04BD-1817-F6134C631D34</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ED871533-A6A9-7DEE-9761-19E4A1C4CDFC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

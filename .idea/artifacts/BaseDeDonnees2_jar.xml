@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BaseDeDonnees2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BaseDeDonnees2_jar</output-path>
+    <root id="archive" name="BaseDeDonnees2.jar">
+      <element id="module-output" name="BaseDeDonnees2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/sqlConnectionplugin/mysql-connector-java-8.0.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/sqlConnectionplugin/ojdbc11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/intellij_forms_rt.jar" path-in-jar="/" />
+      <element id="library" level="project" name="api" />
+      <element id="library" level="project" name="IntelliJ IDEA GridLayout" />
+      <element id="library" level="project" name="mysql-connector-java-8.0.20" />
+    </root>
+  </artifact>
+</component>

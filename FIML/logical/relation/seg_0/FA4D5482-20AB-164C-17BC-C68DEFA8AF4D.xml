@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PAYE" directorySegmentName="seg_0" id="FA4D5482-20AB-164C-17BC-C68DEFA8AF4D">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:41:44 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<sourcePk>31464E4E-B1E0-16C1-4D5F-EAA45F79D892</sourcePk>
+<targetPk>58180547-8059-A26E-CA89-BC923F7BAACD</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E7DF473F-2F41-D71F-6D4E-55AE77934919</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>ED871533-A6A9-7DEE-9761-19E4A1C4CDFC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

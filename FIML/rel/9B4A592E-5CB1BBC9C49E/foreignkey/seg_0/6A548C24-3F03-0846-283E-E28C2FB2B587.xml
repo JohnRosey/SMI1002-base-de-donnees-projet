@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6A548C24-3F03-0846-283E-E28C2FB2B587" containerWithKeyObject="26D83887-A4A3-DF8C-8664-657DE8CE4022" localFKIndex="308676AC-E34A-0D40-D021-4B1E67FCA7F4" name="SERS_CAISSIER_FK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>2745238F-C703-9363-9F0E-691E61E300C4</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<referredTableLongName>CAISSIER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A3AE9E76-6A79-798F-7AB4-A336C823143D</referredTableID>
+<keyObject>255180C4-5918-217B-8EED-5D1ABA544963</keyObject>
+<referredKeyID>255180C4-5918-217B-8EED-5D1ABA544963</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CAISSIER_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

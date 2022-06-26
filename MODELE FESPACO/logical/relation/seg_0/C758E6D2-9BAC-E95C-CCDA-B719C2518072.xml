@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="LIER" directorySegmentName="seg_0" id="C758E6D2-9BAC-E95C-CCDA-B719C2518072">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:40:13 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<sourcePk>6815D99B-9557-4DB6-0E2F-5770069FDFC7</sourcePk>
+<targetPk>136EB80D-F260-3428-C891-DEFC5DE34974</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4D75F282-70E7-A07C-5BBA-7FF2CC44577E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>A6E22C44-3858-F439-3C98-1B56AC3509EF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

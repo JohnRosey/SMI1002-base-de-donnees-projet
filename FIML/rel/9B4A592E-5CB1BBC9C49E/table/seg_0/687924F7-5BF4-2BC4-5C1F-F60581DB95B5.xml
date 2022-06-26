@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="687924F7-5BF4-2BC4-5C1F-F60581DB95B5" name="CLIENT">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:10:49 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0C430E8E-9D25-76CB-C12A-FC2287E57E9E">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:12:15 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOM" id="28779C55-C227-9E58-8246-612F2C079CD1">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:17:38 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRENOM" id="4521EA38-A4DF-548C-B5FE-401DC7BBB6BA">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:17:38 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="70334B37-EB93-5A9F-AB58-491C79F31DE8">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:17:38 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRESSE" id="44EE1F13-4958-03B4-1022-C0D35FACB05E">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:17:38 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="68EAE935-F86B-AFE4-64A5-426C3DBD6573" name="CLIENT_PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:14:53 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C430E8E-9D25-76CB-C12A-FC2287E57E9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

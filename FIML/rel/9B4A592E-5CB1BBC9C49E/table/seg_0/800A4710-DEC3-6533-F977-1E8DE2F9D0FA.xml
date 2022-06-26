@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="800A4710-DEC3-6533-F977-1E8DE2F9D0FA" name="VEND">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAISSIER_CAISSIER_ID" id="772F8EC6-C89D-C6BB-1FF5-F1C6B7E9935C">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="039E5A7E-2FE6-F23F-2B15-01A41152CEA3" referredColumn="DB76E19D-65B1-3F35-80E6-18A461FB30A8"/>
+</associations>
+</Column>
+<Column name="BILLET_ID" id="C756FA1C-1BB9-F58F-29C8-0ED6F026E4F9">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEF3224F-13C1-F395-76A8-F4EB5B3239C7" referredColumn="5794FBCC-3F67-C1B9-3525-B392FC5BBB98"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D91A43E-17C1-46D9-3F2C-C44A275899A0" name="VEND_PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772F8EC6-C89D-C6BB-1FF5-F1C6B7E9935C"/>
+<colUsage columnID="C756FA1C-1BB9-F58F-29C8-0ED6F026E4F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9EF29D5-4D27-62B0-C412-9B88DB967CD4" name="VEND_CAISSIER_FK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>BF88CBC2-0CE5-7E54-0FEC-3982C6476812</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772F8EC6-C89D-C6BB-1FF5-F1C6B7E9935C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F685F7B8-E311-7F95-3D9B-835310720DF3" name="VEND_BILLET_FK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>BF88CBC2-0CE5-7E54-0FEC-3982C6476812</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C756FA1C-1BB9-F58F-29C8-0ED6F026E4F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

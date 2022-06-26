@@ -1,0 +1,64 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "CLIENT"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :p:343:p, comp button3:::p::p, space :280:503:x}, seq {space :::p, comp scrollPane1:::p:653:p, par l {seq l {space :p:150:p, comp separator1:::p::p}, seq {space ::30:x, comp button5:::p::p, space :p:149:p}}}}"
+					"$verticalGroup": "par l {seq l {par l {seq {space :p:195:p, comp separator1:::p::p, space u:::p, comp button5:::p::p}, seq l {space :p:13:p, comp scrollPane1:::p:555:p}}, space ::48:x, comp button3:::p::p, space :p:36:p}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "table1"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JSeparator" ) {
+						name: "separator1"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button3"
+						"text": "RETOUR AU MENU"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button5"
+						"text": "Afficher les donnees"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80"
+					"$hGap": 5
+					"$vGap": 5
+					"$rowSpecs": "0"
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 1005, 770 )
+			"location": new java.awt.Point( 0, 316 )
+		} )
+	}
+}

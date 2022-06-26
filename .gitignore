@@ -1,0 +1,8 @@
+
+con.java
+
+LICENSE
+**/*.localz
+**/*.local
+**/*.git
+**/*.DS_Store

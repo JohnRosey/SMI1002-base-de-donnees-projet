@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A3AE9E76-6A79-798F-7AB4-A336C823143D" name="CAISSIER">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:11:08 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NOM" id="17048ED9-A8FA-0475-92FC-D36C795314D3">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:23:29 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRENOM" id="9742093C-1A39-8706-E07C-0EBE9CE53C73">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:23:29 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRESSE" id="45EC7378-5280-CCF8-A4F9-7F0F37D8F06C">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:23:29 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALAIRE" id="59756F5B-0E4E-CC16-30A2-B4755B272F18">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:23:29 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAISSIER_ID" id="DB76E19D-65B1-3F35-80E6-18A461FB30A8">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:23:29 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="255180C4-5918-217B-8EED-5D1ABA544963" name="CAISSIER_PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:15:00 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB76E19D-65B1-3F35-80E6-18A461FB30A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

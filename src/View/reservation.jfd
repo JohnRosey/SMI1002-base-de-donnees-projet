@@ -1,0 +1,67 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l:::p {seq l {comp label5:::p::p, space :::x, comp label6:::p:130:p}, seq {par t {comp label3:::p:76:p, comp label4:::p:76:p}, space ::59:x, comp textField3:::p:139:p}, seq {par l {seq t {comp label2:::p::p, space :p:35:p}, seq l {comp label1:::p::p, space :p:92:p}}, par l:::p {comp comboBox3::::139:x, comp comboBox2::::139:x, comp comboBox1::::139:x}}}, space ::70:x, comp panel1:::p::p, space :p:25:p}}"
+			"$verticalGroup": "par l {seq t {par t {seq {space :p:38:p, par b {comp label1::b:p::p, comp comboBox2::b:p::p}, space :p:37:p, par b {comp label2::b:p::p, comp comboBox1::b:p::p}, space :p:35:p, par b {comp label3::b:p::p, comp comboBox3::b:p::p}, space ::61:x, comp textField3:::p::p}, seq {space :p:18:p, comp panel1:::::x, space s:::p, comp label4:::p::p}}, space :p:41:p, par b {comp label5::b:p::p, comp label6::b:p::p}, space :p:15:p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "ClientID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Type de paiement"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Film"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Prix"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox2"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox3"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space ::18:x, par l {comp button1::t:p::p, comp button2::t:p::p}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp button1:::p::p, space ::134:x, comp button2:::p::p, space :::p}}"
+			} ) {
+				name: "panel1"
+				"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "Valider"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "Annuler"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "CaissierID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 495, 370 )
+		} )
+	}
+}

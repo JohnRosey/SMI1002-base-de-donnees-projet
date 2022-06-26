@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ED871533-A6A9-7DEE-9761-19E4A1C4CDFC" name="BILLET">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>D5718A32-FDD5-2C5B-6A04-15B32AE520C7</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="70B58CDA-15FE-42DF-2444-F3B192E82277">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>5794FBCC-3F67-C1B9-3525-B392FC5BBB98</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE DE BILLET" id="62CE0C33-635F-CF08-2697-939D8D2DF429">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>95DDDB37-F629-AFCC-B419-5392D5922FA5</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATE HEURE" id="4907AA90-A8BE-EF23-E038-887F37F79A7A">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>3982F553-5A48-6726-5C39-4598BF5E0525</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TYPE PAIEMENT" id="8FB9BC7C-E61D-41DB-E461-D61EA7D38623">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>08C241A0-907E-654C-291E-D7E31710D7DC</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FILM TITRE" id="109F83D8-0A9B-E1BA-7097-F56598165438">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>386ACBA7-898A-558D-FFE2-9C63BCBE39B7</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="885644A9-1B7D-396C-5A91-5EF0A7084A19">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:41:44 UTC</createdTime>
+<generatorID>FA4D5482-20AB-164C-17BC-C68DEFA8AF4D</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<referedAttribute>78184588-F432-A296-32BD-D7CBC14CC1DD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FILM ID" id="271515AE-EF44-94C6-9351-FA1E440CE262">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:45:54 UTC</createdTime>
+<generatorID>E43CEEB2-440A-5C47-7012-3454065FF100</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<referedAttribute>C3271CB0-2C2C-3CCE-150B-74F97073D192</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="58180547-8059-A26E-CA89-BC923F7BAACD" name="BILLET PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:36:20 UTC</createdTime>
+<generatorID>E8157119-4838-5DFC-13CD-5BAAA2DCCBEF</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>70B58CDA-15FE-42DF-2444-F3B192E82277</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

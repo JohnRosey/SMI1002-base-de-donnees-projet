@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB233124-B173-C195-1E82-53605CFE87B7" name="CAISSIER">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:08:45 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="9C31D535-A803-6B5E-2CD6-90CD49C10A35">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:09:53 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOM" id="5783B81D-5FFD-926B-5859-B94806355221">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:09:57 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRENOM" id="D803F42A-C68F-85A2-1183-DEC5CED065AA">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:10:00 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ADRESSE" id="2AC464A8-E919-EFAD-F980-12684E962910">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:10:42 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NUMERO" id="CBC0F5BB-5A1B-FA0E-A396-AF213558656D">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:10:51 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SALAIRE" id="5CAEFB20-0183-6F85-E24C-00AA600DA201">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:14:09 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="81B0B923-E44B-ADC1-DBCA-DB7D6E88448F" name="CAISSIER PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:11:50 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C31D535-A803-6B5E-2CD6-90CD49C10A35</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

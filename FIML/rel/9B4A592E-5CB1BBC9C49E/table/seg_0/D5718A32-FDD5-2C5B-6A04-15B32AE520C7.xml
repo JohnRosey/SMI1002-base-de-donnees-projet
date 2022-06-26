@@ -1,0 +1,155 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D5718A32-FDD5-2C5B-6A04-15B32AE520C7" name="BILLET">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:11:02 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5794FBCC-3F67-C1B9-3525-B392FC5BBB98">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:12:23 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_DE_BILLET" id="95DDDB37-F629-AFCC-B419-5392D5922FA5">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:33:25 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_HEURE" id="3982F553-5A48-6726-5C39-4598BF5E0525">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:33:25 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYPE_PAIEMENT" id="08C241A0-907E-654C-291E-D7E31710D7DC">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:33:25 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FILM_TITRE" id="386ACBA7-898A-558D-FFE2-9C63BCBE39B7">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:33:25 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENT_ID" id="F63D8040-35AB-9CE6-A1D1-5A311E71D27C">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>885644A9-1B7D-396C-5A91-5EF0A7084A19</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F87A87DB-D233-155B-C8A9-FD341F29CB19" referredColumn="0C430E8E-9D25-76CB-C12A-FC2287E57E9E"/>
+</associations>
+</Column>
+<Column name="FILM_FILM_ID" id="47750540-85AF-FDB8-2A44-FDF81442EA64">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>271515AE-EF44-94C6-9351-FA1E440CE262</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81017B9A-B8FD-5611-429B-AA8D7D345456" referredColumn="5C0507B0-D03E-60F1-B25C-DE8154A1C685"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E8157119-4838-5DFC-13CD-5BAAA2DCCBEF" name="BILLET_PK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:14:57 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5794FBCC-3F67-C1B9-3525-B392FC5BBB98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB0E21B7-C71B-7D5E-2059-210F4858C6AD" name="BILLET__IDX">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>FA4D5482-20AB-164C-17BC-C68DEFA8AF4D</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F63D8040-35AB-9CE6-A1D1-5A311E71D27C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27E24C75-C86D-CE90-3E16-730B909F3B0E" name="BILLET__IDXv1">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E43CEEB2-440A-5C47-7012-3454065FF100</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="47750540-85AF-FDB8-2A44-FDF81442EA64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="352D01F4-D853-68D4-1EA4-F2A8EC954AD4" name="BILLET_CLIENT_FK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>FA4D5482-20AB-164C-17BC-C68DEFA8AF4D</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F63D8040-35AB-9CE6-A1D1-5A311E71D27C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DB69C7F-44DE-5AEF-7047-545D5DDC7C48" name="BILLET_FILM_FK">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 20:46:21 UTC</createdTime>
+<generatorID>E43CEEB2-440A-5C47-7012-3454065FF100</generatorID>
+<ownerDesignName>FIML</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47750540-85AF-FDB8-2A44-FDF81442EA64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

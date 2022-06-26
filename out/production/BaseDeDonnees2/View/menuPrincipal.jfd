@@ -1,0 +1,64 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "ACCUEIL"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp panel1:::::x, seq l {comp button1:::p:145:p, space :::x, par l {comp label3:::p::p, comp button5:::p:121:p}}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {par l {seq {comp panel1:::p::p, space :p:59:p, comp button1:::p::p}, seq l {space :p:142:p, comp label3:::p::p, space :::p, comp button5:::p::p}}, space ::173:x}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :p:194:p, comp label1:::p::p, space ::238:x}}"
+						"$verticalGroup": "par l {seq l {space :p:38:p, comp label1:::p::p, space ::46:x}}"
+					} ) {
+						name: "panel1"
+						"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "INFO FILM"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button5"
+						"text": "CLIENT"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "LISTE DES FILMS"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Voir la liste des clients"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 530, 455 )
+		} )
+	}
+}

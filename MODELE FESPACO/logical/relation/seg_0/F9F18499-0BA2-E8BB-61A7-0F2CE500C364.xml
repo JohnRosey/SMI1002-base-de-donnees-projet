@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ACHETE" directorySegmentName="seg_0" id="F9F18499-0BA2-E8BB-61A7-0F2CE500C364">
+<createdBy>gansonre</createdBy>
+<createdTime>2022-04-27 19:54:45 UTC</createdTime>
+<ownerDesignName>MODELE FESPACO</ownerDesignName>
+<engineerTo>
+<item key="9B4A592E-3341-B0C7-9AC6-5CB1BBC9C49E" value="true"/>
+</engineerTo>
+<sourcePk>A06AF44F-11F6-9113-DFD3-5D90E725B6F5</sourcePk>
+<targetPk>6815D99B-9557-4DB6-0E2F-5770069FDFC7</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>58252C29-2263-BBA4-FC6F-6826174144F4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4D75F282-70E7-A07C-5BBA-7FF2CC44577E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
